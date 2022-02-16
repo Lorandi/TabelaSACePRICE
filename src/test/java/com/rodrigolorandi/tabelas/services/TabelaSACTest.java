@@ -1,3 +1,6 @@
+package com.rodrigolorandi.tabelas.services;
+
+import com.rodrigolorandi.tabelas.services.TabelaSAC;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

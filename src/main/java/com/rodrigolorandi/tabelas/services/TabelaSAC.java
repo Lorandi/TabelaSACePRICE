@@ -1,4 +1,4 @@
-/*
+package com.rodrigolorandi.tabelas.services;/*
 PMT = prestação
 PV = valor presente no momento da contratação
 i = taxa de juros
@@ -7,6 +7,9 @@ amort = amortização
 saldo devedor = saldo após desconto da armotização no período
  */
 
+import lombok.Data;
+
+@Data
 public class TabelaSAC implements Tabela{
     Double pv;
     Double i;
@@ -70,69 +73,5 @@ public class TabelaSAC implements Tabela{
         System.out.printf("Valor total pago: R$%.2f \n\n", getTotalPago());
 
         return true;
-    }
-
-    public Double getPv() {
-        return pv;
-    }
-
-    public void setPv(Double pv) {
-        this.pv = pv;
-    }
-
-    public Double getI() {
-        return i;
-    }
-
-    public void setI(Double i) {
-        this.i = i;
-    }
-
-    public Integer getN() {
-        return n;
-    }
-
-    public void setN(Integer n) {
-        this.n = n;
-    }
-
-    public Double getPmt() {
-        return pmt;
-    }
-
-    public void setPmt(Double pmt) {
-        this.pmt = pmt;
-    }
-
-    public Double getJuros() {
-        return juros;
-    }
-
-    public void setJuros(Double juros) {
-        this.juros = juros;
-    }
-
-    public Double getAmort() {
-        return amort;
-    }
-
-    public void setAmort(Double amort) {
-        this.amort = amort;
-    }
-
-    public Double getSaldoDevedor() {
-        return saldoDevedor;
-    }
-
-    public void setSaldoDevedor(Double saldoDevedor) {
-        this.saldoDevedor = saldoDevedor;
-    }
-
-    public Double getTotalPago() {
-        return totalPago;
-    }
-
-    public void setTotalPago(Double totalPago) {
-        this.totalPago = totalPago;
     }
 }

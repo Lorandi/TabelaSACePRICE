@@ -1,4 +1,5 @@
-import org.junit.jupiter.api.Test;
+import com.rodrigolorandi.tabelas.services.TabelaPrice;
+import com.rodrigolorandi.tabelas.services.TabelaSAC;
 
 import java.util.Scanner;
 
@@ -34,10 +35,10 @@ public class App {
             TabelaSAC tabelaSAC = new TabelaSAC(pv, i, n);
             tabelaSAC.criarTabela();
 
-            if (tabelaPrice.totalPago > tabelaSAC.totalPago) {
-                System.out.printf("Pela Price ficou R$%.2f mais caro \n\n", (tabelaPrice.totalPago - tabelaSAC.totalPago));
+            if (tabelaPrice.getTotalPago() > tabelaSAC.getTotalPago()) {
+                System.out.printf("Pela Price ficou R$%.2f mais caro \n\n", (tabelaPrice.getTotalPago() - tabelaSAC.getTotalPago()));
             } else {
-                System.out.printf("Pela SAC ficou R$%.2f mais caro \n\n", (tabelaSAC.totalPago - tabelaPrice.totalPago));
+                System.out.printf("Pela SAC ficou R$%.2f mais caro \n\n", (tabelaSAC.getTotalPago() - tabelaPrice.getTotalPago()));
             }
 
             continuar = false;

@@ -1,10 +1,7 @@
-import org.junit.*;
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.Test;
+package com.rodrigolorandi.tabelas.services;
 
-import java.text.DecimalFormat;
-import java.util.Arrays;
-import java.util.List;
+import com.rodrigolorandi.tabelas.services.TabelaPrice;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 

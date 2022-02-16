@@ -1,3 +1,5 @@
+package com.rodrigolorandi.tabelas.services;
+
 public interface Tabela {
 
     Double calculaPmt();

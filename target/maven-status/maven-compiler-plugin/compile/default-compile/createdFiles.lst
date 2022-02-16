@@ -1,4 +1,4 @@
-Tabela.class
 App.class
-TabelaSAC.class
-TabelaPrice.class
+com\rodrigolorandi\tabelas\services\TabelaSAC.class
+com\rodrigolorandi\tabelas\services\TabelaPrice.class
+com\rodrigolorandi\tabelas\services\Tabela.class
