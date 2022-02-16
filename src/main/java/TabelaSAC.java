@@ -53,8 +53,7 @@ public class TabelaSAC implements Tabela{
     }
 
     @Override
-    public void criarTabela(){
-
+    public boolean criarTabela(){
         System.out.println("\n                 TABELA SAC    ");
         System.out.printf("Valor inicial R$%.2f \n", getPv());
         System.out.println("Parc    PMT         Juros      Amort      Saldo Devedor");
@@ -68,8 +67,9 @@ public class TabelaSAC implements Tabela{
             System.out.printf("  %d   R$%.2f   R$%.2f   R$%.2f     R$%.2f",j + 1, getPmt(), getJuros(), getAmort(), getSaldoDevedor());
             System.out.println();
         }
-
         System.out.printf("Valor total pago: R$%.2f \n\n", getTotalPago());
+
+        return true;
     }
 
     public Double getPv() {
@@ -135,6 +135,4 @@ public class TabelaSAC implements Tabela{
     public void setTotalPago(Double totalPago) {
         this.totalPago = totalPago;
     }
-
-
 }

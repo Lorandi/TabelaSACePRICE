@@ -10,6 +10,6 @@ public interface Tabela {
 
     Double calculaValorTotalPago();
 
-    void criarTabela();
+    boolean criarTabela();
 
 }

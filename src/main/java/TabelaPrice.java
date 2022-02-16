@@ -53,7 +53,7 @@ public class TabelaPrice implements Tabela{
     }
 
     @Override
-    public void criarTabela(){
+    public boolean criarTabela(){
         System.out.println("\n                 TABELA PRICE    ");
         System.out.printf("Valor inicial R$%.2f \n", getPv());
         System.out.println("Parc    PMT        Juros      Amort      Saldo Devedor");
@@ -68,6 +68,8 @@ public class TabelaPrice implements Tabela{
         }
 
         System.out.printf("Valor total pago: R$%.2f \n\n", getTotalPago());
+
+        return true;
     }
 
     public Double getPv() {
