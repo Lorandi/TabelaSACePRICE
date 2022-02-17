@@ -15,14 +15,14 @@ import org.junit.Ignore;
 @Getter
 @Setter
 public class TabelaPrice implements Tabela{
-    Double pv;
-    Double i;
-    Integer n;
-    Double pmt;
-    Double juros;
-    Double amort;
-    Double saldoDevedor;
-    Double totalPago = 0.00;
+    private Double pv;
+    private Double i;
+    private Integer n;
+    private Double pmt;
+    private Double juros;
+    private Double amort;
+    private Double saldoDevedor;
+    private Double totalPago = 0.00;
 
 
     public TabelaPrice(Double pv, Double i, Integer n) {
@@ -34,29 +34,29 @@ public class TabelaPrice implements Tabela{
 
     @Override
     public Double calculaPmt() {
-        pmt = pv/((Math.pow((1 + i/100),n)-1)/(Math.pow((1 + i/100),n)*i/100));
+        this.pmt = pv/((Math.pow((1 + i/100),n)-1)/(Math.pow((1 + i/100),n)*(i/100)));
         return pmt;
     }
 
     @Override
     public Double calculaJuros() {
-        juros = saldoDevedor * i/100;
+        this.juros = saldoDevedor * (i/100);
         return juros;
     }
 
     @Override
     public Double calculaAmort() {
-        return amort = pmt - juros;
+        return this.amort = pmt - juros;
     }
 
     @Override
     public Double calculaSaldoDevedor() {
-        return saldoDevedor = saldoDevedor - amort;
+        return this.saldoDevedor = saldoDevedor - amort;
     }
 
     @Override
     public Double calculaValorTotalPago() {
-        return totalPago += pmt;
+        return this.totalPago += pmt;
     }
 
     @Override

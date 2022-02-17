@@ -11,14 +11,14 @@ import lombok.Data;
 
 @Data
 public class TabelaSAC implements Tabela{
-    Double pv;
-    Double i;
-    Integer n;
-    Double pmt;
-    Double juros;
-    Double amort;
-    Double saldoDevedor;
-    Double totalPago = 0.00;
+    private Double pv;
+    private Double i;
+    private Integer n;
+    private Double pmt;
+    private Double juros;
+    private Double amort;
+    private Double saldoDevedor;
+    private Double totalPago = 0.00;
 
 
     public TabelaSAC(Double pv, Double i, Integer n) {
@@ -30,29 +30,29 @@ public class TabelaSAC implements Tabela{
 
     @Override
     public Double calculaAmort() {
-        return amort = pv / n;
+        return this.amort = pv / n;
     }
 
     @Override
     public Double calculaJuros() {
-        juros = saldoDevedor * i/100;
+        this.juros = saldoDevedor * (i/100);
         return juros;
     }
 
     @Override
     public Double calculaPmt() {
-        pmt = amort + juros;
+        this.pmt = amort + juros;
         return pmt;
     }
 
     @Override
     public Double calculaSaldoDevedor() {
-        return saldoDevedor = saldoDevedor - amort;
+        return this.saldoDevedor = saldoDevedor - amort;
     }
 
     @Override
     public Double calculaValorTotalPago() {
-        return totalPago += pmt;
+        return this.totalPago += pmt;
     }
 
     @Override
